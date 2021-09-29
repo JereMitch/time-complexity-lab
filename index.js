@@ -153,3 +153,15 @@ function squareEveryDigit(number) {
 console.log(squareEveryDigit(946))
 
 // squareEveryDigit(946) // When running 946, you should see a result of 811636
+
+function squareEveryDigit2(number) {
+  let ansArr = []
+  let numArr = (number + '').split('').map((i) => {return Number(i)})
+  for(let i = 0; i < numArr.length; i++){
+    let newNum = numArr[i]
+    ansArr += Math.pow(newNum, 2)
+  }
+  return parseInt(ansArr)
+}
+
+console.log(squareEveryDigit2(946))
